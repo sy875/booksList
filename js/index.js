@@ -67,7 +67,7 @@ function renderBooks(booksToRender) {
                 <h2>${book.volumeInfo.title.slice(0,20)}</h2>
                 <p>Author: ${book.volumeInfo.authors?.slice(0,20).join(', ') || 'Unknown'}</p>
                 <p>Published: ${book.volumeInfo.publishedDate || 'N/A'}</p>
-                <a href="/bk/bookLib/bookDetail.html?id=${book.id}" target="_blank">More Details</a>
+                <a href="bookDetail.html?id=${book.id}" target="_blank">More Details</a>
             </div>
         `;
 
