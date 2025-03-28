@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Book Library</h1>
+
+      <div class="controls">
+        <!-- //search input  -->
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by title or author"
+        />
+
+        <!-- sort a-z and z-a on title and author and newest and oldest on date  -->
+        <select id="sortSelect">
+          <option value="title-asc">Title (A-Z)</option>
+          <option value="title-desc">Title (Z-A)</option>
+          <option value="author-asc">Author (A-Z)</option>
+          <option value="author-desc">Author (Z-A)</option>
+          <option value="date-asc">Date (Oldest First)</option>
+          <option value="date-desc">Date (Newest First)</option>
+        </select>
+        <!-- toggle between list view and grid view  -->
+        <div class="view-toggle">
+          <button id="listViewBtn">List View</button>
+          <button id="gridViewBtn">Grid View</button>
+        </div>
+      </div>
+
+      <!-- used to show loader while data is being fetched -->
+      <div id="loader" class="loader">
+        <div class="spinner"></div>
+      </div>
+
+      <div id="booksContainer" class="books-list"></div>
+
+      <!-- this is used to show pagination and also to go to next and previous page  -->
+      <div class="pagination">
+        <button id="prevPageBtn" disabled>Previous</button>
+        <span id="currentPage">Page 1</span>
+        <button id="nextPageBtn">Next</button>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
